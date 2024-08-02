@@ -1,6 +1,5 @@
 package com.example.unit_testing
 
-import org.junit.jupiter.api.Disabled
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
 import org.springframework.boot.test.context.SpringBootTest
@@ -31,15 +30,6 @@ class UnitTestingApplicationTests {
 	@Test
 	fun test() {
 		assertTrue(num!! == 5, "Number should be equal to 10")
-	}
-
-	/**
-	 * The @Disabled annotation is used to ignore a particular method when running the test
-	 * It becomes handy when the developer wants to execute only some tests.
-	 */
-	@Disabled
-	fun ignoreThisTest() {
-		assertTrue { num!! == 5 }
 	}
 
 	/**
