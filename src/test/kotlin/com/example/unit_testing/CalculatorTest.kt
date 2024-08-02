@@ -21,7 +21,7 @@ class CalculatorTest {
     @Test
     fun addNumbers() {
         val sumTest = calculator.addNumbers(10, 10)
-        assertTrue { sumTest == sum }
+        assertTrue { sum == sumTest }
     }
 
     /**
@@ -32,7 +32,7 @@ class CalculatorTest {
     @Test
     fun addNumbersMutated() {
         val sumTest = calculator.addNumbers(10, 10)
-        assertFalse { sumTest == sum } // the mutation
+        assertFalse { sum == sumTest} // the mutation
     }
 
 
