@@ -39,6 +39,19 @@ dependencies {
 	testImplementation("org.jetbrains.kotlin:kotlin-test-junit5")
 	testRuntimeOnly("org.junit.platform:junit-platform-launcher")
 	testImplementation("junit:junit:4.13.2")
+
+// Mockito core library
+	testImplementation("org.mockito:mockito-core:4.11.0")
+
+	// Mockito inline for mocking final classes and methods
+	testImplementation("org.mockito:mockito-inline:4.11.0")
+
+	// Mockito-Kotlin support library
+	testImplementation("org.mockito.kotlin:mockito-kotlin:4.1.0")
+
+	// Kotlin test library
+	testImplementation("org.jetbrains.kotlin:kotlin-test:1.9.10")
+
 }
 
 kotlin {

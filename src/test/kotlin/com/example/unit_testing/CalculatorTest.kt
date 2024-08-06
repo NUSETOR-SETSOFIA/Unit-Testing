@@ -2,16 +2,22 @@ package com.example.unit_testing
 
 import org.junit.jupiter.api.Test
 import org.springframework.boot.test.context.SpringBootTest
+import kotlin.random.Random
 import kotlin.test.*
 
 @SpringBootTest
 class CalculatorTest {
     private var sum: Int? = null
+    private var num1: Int? = null
+    private var num2: Int? = null
     private var calculator: Calculator = Calculator()
 
     @BeforeTest
     fun assignAValueToSum() {
-        sum = 20
+        num1 = Random.nextInt()
+        num2 = Random.nextInt()
+
+        sum = num1!! + num2!!
     }
 
     /**
@@ -20,7 +26,7 @@ class CalculatorTest {
      */
     @Test
     fun addNumbers() {
-        val sumTest = calculator.addNumbers(10, 10)
+        val sumTest = calculator.addNumbers(num1!!, num2!!)
         assertTrue { sum == sumTest }
     }
 
@@ -31,8 +37,8 @@ class CalculatorTest {
      */
     @Test
     fun addNumbersMutated() {
-        val sumTest = calculator.addNumbers(10, 10)
-        assertFalse { sum == sumTest} // the mutation
+        val sumTest = calculator.addNumbers(num1!!, num2!!)
+        assertFalse { sum != sumTest} // the mutation
     }
 
 
