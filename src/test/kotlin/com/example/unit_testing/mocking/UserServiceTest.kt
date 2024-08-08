@@ -1,7 +1,6 @@
 package com.example.unit_testing.mocking
 
 import org.junit.jupiter.api.Test
-import org.mockito.kotlin.mock
 import kotlin.random.Random
 import kotlin.test.BeforeTest
 import kotlin.test.assertTrue
@@ -14,7 +13,7 @@ class UserServiceTest {
     @BeforeTest
     fun assignTheRandomCount() {
         count = Random.nextInt(5)
-        var iterate: Int = 0
+        var iterate = 0
 
         while (count!! > iterate) {
             iterate += 1
